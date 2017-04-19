@@ -28,8 +28,8 @@
         <!-- spring -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring</artifactId>
-            <version>3.0.5.RELEASE</version>
+            <artifactId>spring-core</artifactId>
+            <version>3.1.2.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework</groupId>
@@ -54,11 +54,11 @@
             <version>2.1_3</version>
         </dependency>
         <!-- springside-core -->
-        <dependency>
-            <groupId>org.springside</groupId>
-            <artifactId>springside-core</artifactId>
-            <version>4.0.0.GA</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springside</groupId>-->
+            <!--<artifactId>springside-core</artifactId>-->
+            <!--<version>4.0.0.GA</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -146,11 +146,11 @@
             <artifactId>dom4j</artifactId>
             <version>1.6.1</version>
         </dependency>
-        <dependency>
-            <groupId>net.sourceforge.pinyin4j</groupId>
-            <artifactId>pinyin4j</artifactId>
-            <version>2.5.0</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>net.sourceforge.pinyin4j</groupId>-->
+            <!--<artifactId>pinyin4j</artifactId>-->
+            <!--<version>2.5.0</version>-->
+        <!--</dependency>-->
 
         <!-- common-lang -->
         <dependency>
@@ -260,11 +260,11 @@
         </dependency>
 
         <!-- 支付宝支付 -->
-        <dependency>
-            <groupId>com.alipay.api</groupId>
-            <artifactId>alipay-sdk</artifactId>
-            <version>1.5</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.alipay.api</groupId>-->
+            <!--<artifactId>alipay-sdk</artifactId>-->
+            <!--<version>1.5</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>

@@ -14,6 +14,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,8 +51,8 @@ public class WeixinScanPayController {
             RequestMethod.POST}, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String pay(HttpServletRequest request,
-                             HttpServletResponse response,
-                             @RequestParam("voucherId") String voucherId) {
+                      HttpServletResponse response,
+                      @RequestParam("voucherId") String voucherId) {
 
         PayOrderParam param = new PayOrderParam();
         // 基本信息
@@ -136,4 +137,15 @@ public class WeixinScanPayController {
         return WeixinUtil.getResult(ResultCode.SUCCESS, "OK");
     }
 
+
+    //支付请求  add bu bp.liu 20170419
+    @RequestMapping("/pay.html")
+    public String pay(Model model, HttpServletRequest request, @RequestParam("voucherId") String voucherId
+            , @RequestParam("total") Integer total) {
+
+        model.addAttribute("voucherId", voucherId);
+        model.addAttribute("total", total);
+
+        return "weixin/pay";
+    }
 }
