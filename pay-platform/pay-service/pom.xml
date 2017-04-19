@@ -25,11 +25,11 @@
 
 
         <!-- 支付宝支付 -->
-        <dependency>
-            <groupId>com.alipay.api</groupId>
-            <artifactId>alipay-sdk</artifactId>
-            <version>1.5</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.alipay.api</groupId>-->
+            <!--<artifactId>alipay-sdk</artifactId>-->
+            <!--<version>1.5</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.kk</groupId>
             <artifactId>web-common</artifactId>
