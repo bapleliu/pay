@@ -163,4 +163,15 @@ public class WeixinH5PayController {
         JSONObject ret = JSONObject.parseObject(JSON.toJSONString(data));
         return ret;
     }
+
+    //支付请求  add bu bp.liu 20170419
+    @RequestMapping("/pay.html")
+    public String pay(Model model, HttpServletRequest request, @RequestParam("voucherId") String voucherId
+            , @RequestParam("total") Integer total) {
+
+        model.addAttribute("voucherId", voucherId);
+        model.addAttribute("total", total);
+
+        return "weixin/pay";
+    }
 }

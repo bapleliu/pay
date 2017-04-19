@@ -22,8 +22,8 @@
     <div class="branch_con">
         <ul>
             <li><span class="name">测试支付信息，1分钱</span></li>
-            <input type="hidden" id="voucherId" name="voucherId" value="${voucherId}">
-            <input type="hidden" id="total" name="total" value="${total}">
+            <input type="hidden" id="voucherId" value="${voucherId}">
+            <input type="hidden" id="total" value="${total}">
         </ul>
         <p class="cz_btn"><a href="javascript:void(0);" class="btn_1" id="payAction">立即支付</a></p>
     </div>
@@ -37,9 +37,9 @@
         function onBridgeReady(param) {
             WeixinJSBridge.invoke(
                     'getBrandWCPayRequest', {
-                        "appId": "wxf8b4f85f3a794e77",     //公众号名称，由商户传入
-                        "timeStamp": "189026618",         //时间戳，自1970年以来的秒数
-                        "nonceStr": "adssdasssd13d", //随机串
+                        "appId": param['appId'],     //公众号名称，由商户传入
+                        "timeStamp": param['timeStamp'],         //时间戳，自1970年以来的秒数
+                        "nonceStr": param['nonceStr'], //随机串
                         "package": param['package'],
                         "signType": param['signType'],         //微信签名方式:
                         "paySign": param['paySign']    //微信签名
