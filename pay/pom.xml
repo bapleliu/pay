@@ -55,9 +55,9 @@
         </dependency>
         <!-- springside-core -->
         <!--<dependency>-->
-            <!--<groupId>org.springside</groupId>-->
-            <!--<artifactId>springside-core</artifactId>-->
-            <!--<version>4.0.0.GA</version>-->
+        <!--<groupId>org.springside</groupId>-->
+        <!--<artifactId>springside-core</artifactId>-->
+        <!--<version>4.0.0.GA</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -147,9 +147,9 @@
             <version>1.6.1</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>net.sourceforge.pinyin4j</groupId>-->
-            <!--<artifactId>pinyin4j</artifactId>-->
-            <!--<version>2.5.0</version>-->
+        <!--<groupId>net.sourceforge.pinyin4j</groupId>-->
+        <!--<artifactId>pinyin4j</artifactId>-->
+        <!--<version>2.5.0</version>-->
         <!--</dependency>-->
 
         <!-- common-lang -->
@@ -261,10 +261,15 @@
 
         <!-- 支付宝支付 -->
         <!--<dependency>-->
-            <!--<groupId>com.alipay.api</groupId>-->
-            <!--<artifactId>alipay-sdk</artifactId>-->
-            <!--<version>1.5</version>-->
+        <!--<groupId>com.alipay.api</groupId>-->
+        <!--<artifactId>alipay-sdk</artifactId>-->
+        <!--<version>1.5</version>-->
         <!--</dependency>-->
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>alipay-sdk</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
@@ -355,4 +360,18 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <!-- 支付宝的SDK快照库 -->
+        <repository>
+            <id>nutz-snapshots</id>
+            <url>https://jfrog.nutz.cn/artifactory/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
 </project>
